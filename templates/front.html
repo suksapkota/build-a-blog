@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<a href="/blog">Home</a>
+|
+<a href="/blog/newpost"> new post</a>
+
+<h1>blog!</h1>
+{% for x in arts %}
+  <div class ="art">
+    <div class="art-title"> <a href = "/blog/{{x.key().id()}}">{{x.title}}</a></div>
+    <pre class = "art-body">{{x.art}}</pre>
+  </div>
+
+  {% endfor %}
+  {% endblock %}
